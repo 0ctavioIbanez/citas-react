@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 
-const Formulario = () => {
+const Formulario = ({handleCitas}) => {
 
      //Campos formulario
      const [citas, setCitas] = useState({
@@ -38,7 +38,7 @@ const Formulario = () => {
         }
 
         // Agregar cita a local storage
-        
+        handleCitas(citas);
 
     }
 
