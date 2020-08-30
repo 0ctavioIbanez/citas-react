@@ -91,7 +91,7 @@ const Formulario = ({handleCitas}) => {
 
                 <label>Fecha de la cita</label>
                 <input 
-                    type="text"
+                    type="date"
                     name="fecha"
                     className="u-full-width"
                     placeholder="Nombre de la mascota"

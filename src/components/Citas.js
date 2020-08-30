@@ -4,7 +4,7 @@ const Citas = ({cita, eliminarCita}) => {
 
     return (
         <Fragment>
-            <div>
+            <div className="cita animated fadeIn fast">
                 <h4>Mascota: {cita.mascota}</h4>
                 <p>Dueño: {cita.dueno}</p>
                 <p>Fecha: {cita.fecha}</p>
