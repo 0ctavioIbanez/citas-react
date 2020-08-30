@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/0ctavioIbanez/citas-react.git/static/css/main.bb18ebbb.chunk.css",
+    "main.js": "/0ctavioIbanez/citas-react.git/static/js/main.77d6be90.chunk.js",
+    "main.js.map": "/0ctavioIbanez/citas-react.git/static/js/main.77d6be90.chunk.js.map",
+    "runtime-main.js": "/0ctavioIbanez/citas-react.git/static/js/runtime-main.667fd7bf.js",
+    "runtime-main.js.map": "/0ctavioIbanez/citas-react.git/static/js/runtime-main.667fd7bf.js.map",
+    "static/js/2.937a4f6c.chunk.js": "/0ctavioIbanez/citas-react.git/static/js/2.937a4f6c.chunk.js",
+    "static/js/2.937a4f6c.chunk.js.map": "/0ctavioIbanez/citas-react.git/static/js/2.937a4f6c.chunk.js.map",
+    "index.html": "/0ctavioIbanez/citas-react.git/index.html",
+    "precache-manifest.b30442e83c2a94d0a190b36461734ec8.js": "/0ctavioIbanez/citas-react.git/precache-manifest.b30442e83c2a94d0a190b36461734ec8.js",
+    "service-worker.js": "/0ctavioIbanez/citas-react.git/service-worker.js",
+    "static/css/main.bb18ebbb.chunk.css.map": "/0ctavioIbanez/citas-react.git/static/css/main.bb18ebbb.chunk.css.map",
+    "static/js/2.937a4f6c.chunk.js.LICENSE.txt": "/0ctavioIbanez/citas-react.git/static/js/2.937a4f6c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.667fd7bf.js",
+    "static/js/2.937a4f6c.chunk.js",
+    "static/css/main.bb18ebbb.chunk.css",
+    "static/js/main.77d6be90.chunk.js"
+  ]
+}
