@@ -5,10 +5,8 @@ import Citas from './components/Citas';
 function App() {
 
   const eliminarCita = key =>{
-    let prueba = listadoCitas.filter( () => {
-      return listadoCitas.id !== key;
-    });
-    console.log(prueba);
+    let nuevoListado = listadoCitas.filter( borrar => borrar.id !== key );
+    setListadoCitas(nuevoListado)
   }
 
   //Verificar datos en local storage
