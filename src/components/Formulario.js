@@ -10,6 +10,8 @@ const Formulario = ({handleCitas}) => {
         sintomas: ''
     });
 
+    let {mascota, dueno, fecha, sintomas} = citas;
+
 // State citas
     const updateCitas = e => {
         setCitas({
@@ -37,9 +39,19 @@ const Formulario = ({handleCitas}) => {
             return;
         }
 
+        //Asignar id
+        citas.id = (Math.random() * 100).toFixed();
+
         // Agregar cita a local storage
         handleCitas(citas);
 
+        //Reiniciar formulario
+        setCitas({
+            mascota: '',
+            dueno: '',
+            fecha: '',
+            sintomas: ''
+        });
     }
 
     function mostrarError(){
@@ -49,9 +61,11 @@ const Formulario = ({handleCitas}) => {
         }, 2500);
     }
 
+    
+
     return ( 
         <Fragment>
-            <h2>Desde Formulario</h2>
+            <h2>Agrega una cita</h2>
             <form
                 onSubmit={ validaForm }
             >
@@ -62,6 +76,7 @@ const Formulario = ({handleCitas}) => {
                     className="u-full-width"
                     placeholder="Nombre de la mascota"
                     onChange={updateCitas}
+                    value={mascota}
                 />
 
                 <label>Nombre del dueño</label>
@@ -71,6 +86,7 @@ const Formulario = ({handleCitas}) => {
                     className="u-full-width"
                     placeholder="Nombre del dueño"
                     onChange={updateCitas}
+                    value={dueno}
                 />
 
                 <label>Fecha de la cita</label>
@@ -80,6 +96,7 @@ const Formulario = ({handleCitas}) => {
                     className="u-full-width"
                     placeholder="Nombre de la mascota"
                     onChange={updateCitas}
+                    value={fecha}
                 />
 
                 <label>Síntomas</label>
@@ -87,6 +104,7 @@ const Formulario = ({handleCitas}) => {
                     name="sintomas"
                     className="u-full-width"
                     onChange={updateCitas}
+                    value={sintomas}
                 ></textarea>
 
                 <button 

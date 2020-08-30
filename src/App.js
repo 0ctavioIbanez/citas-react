@@ -1,10 +1,23 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import Formulario from './components/Formulario';
 import Citas from './components/Citas';
 
 function App() {
 
-  const [listadoCitas, setListadoCitas] = useState([]);
+  const eliminarCita = key =>{
+    let prueba = listadoCitas.filter( () => {
+      return listadoCitas.id !== key;
+    });
+    console.log(prueba);
+  }
+
+  //Verificar datos en local storage
+  let ls = JSON.parse(localStorage.getItem('citas'));
+  if (!ls) {
+    ls = [];
+  }
+
+  const [listadoCitas, setListadoCitas] = useState(ls);
 
   const handleCitas = citas => {
     setListadoCitas([
@@ -12,6 +25,11 @@ function App() {
       citas
     ]);
   }
+ 
+
+  useEffect( () => {
+    localStorage.setItem('citas', JSON.stringify(listadoCitas));
+  }, [listadoCitas])
 
   return (
     <Fragment>
@@ -31,6 +49,7 @@ function App() {
             <Citas 
               key={Math.random()}
               cita={cita}
+              eliminarCita={eliminarCita}
             />
           ))}
           
